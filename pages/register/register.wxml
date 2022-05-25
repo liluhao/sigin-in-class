@@ -1,0 +1,28 @@
+<!--pages/register/register.wxml-->
+<view class="register_content">
+  <view class="register_head">
+    <image src="../../static/image/login/login.png"></image>
+    <view class="register_headTip">签到助手</view>
+    <view class="register_inputs">
+      <input type="text" class="register_input" placeholder="请输入手机号" model:value="{{phone}}" />
+      <input type="text" class="register_input" placeholder="请输入邮箱" model:value="{{email}}" />
+      <input type="text" class="register_input" password="true" placeholder="请输入密码" model:value="{{password}}" />
+      <view class="weui-cell_bd">
+        <picker aria-role="combobox" bindchange="bindPickerChange" range="{{array}}" class="register_select">
+          <text class="weui-select">{{value}}</text>
+          <image src="../../static/image/login/point.png" id="register_select_image"></image>
+        </picker>
+      </view>
+      <view class="weui-cell_bd" wx:if="{{value=='学生'}}">
+        <picker aria-role="combobox" bindchange="bindPickerChange1" range="{{array1}}" class="register_select">
+          <text class="weui-select">{{value1}}</text>
+          <image src="../../static/image/login/point.png" id="register_select_image"></image>
+        </picker>
+      </view>
+      <navigator class="weui-btn weui-btn_primary" aria-role="button" url="javascript:" bindtap="formSubmit">立即注册</navigator>
+      <view bindtap="Toregister" class="register_select" bindtap="Tologin">已有账号？立即登录</view>
+    </view>
+
+  </view>
+
+</view>

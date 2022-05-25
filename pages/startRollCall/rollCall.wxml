@@ -1,0 +1,76 @@
+<!--pages/startRollCall/rollCall.wxml-->
+<view class="rooCall_index">
+  <view class="rollCall_fanhui" bindtap="goback">
+    <image src="../../static/image/startRollCall/back.png"></image>
+  </view>
+  <view class="rollCall_header">
+    <view>
+      <text>创建签到</text>
+    </view>
+    <view class="rollCall_bird">
+      <image src="../../static/image/startRollCall/logo.png"></image>
+    </view>
+  </view>
+  <view class="rooCall_content">
+    <!-- 选择课堂 -->
+    <view class="rollCall_selectClass">
+      <text>选择课堂</text>
+      <view class="rollCall_selectClassIcon">
+        <picker bindchange="selectSign_class" value="{{index}}" range="{{arrayClass}}">
+          <image src="../../static/image/startRollCall/add.png"></image>
+          <view class="picker">
+            <view wx:if="{{sign_Class == ''}}">请选择上课班级</view>
+            <view wx:else="{{sign_Class}}">{{sign_Class}}</view>
+          </view>
+        </picker>
+      </view>
+
+    </view>
+    <!-- 签到时间 -->
+    <view class="rollCall_selectClass">
+      <text>签到时间</text>
+      <view class="rollCall_selectClassIcon">
+        <picker bindchange="selectSign_time" value="{{index}}" range="{{arrayTime}}">
+          <image src="../../static/image/startRollCall/select.png"></image>
+          <view class="picker">
+            <view wx:if="{{sign_Time == ''}}">请选择签到时长</view>
+            <view wx:else="{{sign_Time}}">{{sign_Time}}</view>
+          </view>
+        </picker>
+      </view>
+    </view>
+    <!-- 签到方式 -->
+    <view class="rollCall_selectCheckWay">
+      <view class="rollCall_selectCheckWayText"><text>签到方式</text></view>
+      <view class="rollCall_checkWay">
+        <radio-group>
+          <view bindtap="selectQR">二维码 <radio color="rgb(0,129,255)" checked="{{QR_code}}"></radio>
+          </view>
+          <view bindtap="selectSign">签到码 <radio color="rgb(0,129,255)" checked="{{Sign_in_code}}"></radio>
+          </view>
+        </radio-group>
+      </view>
+    </view>
+  </view>
+  <!-- 开始签到 -->
+  <view class="rooCall_footer">
+    <button bindtap="startCheck">开始签到</button>
+  </view>
+  <!-- 遮罩 -->
+  <view class="rollCall_mask  {{showMask ? '' : 'rollCall_showMask'}} ">
+    <view class="rollCall_image">
+      <image src="../../static/image/startRollCall/qr_bg.png"></image>
+      <view class="rollCall_canvas {{showMask ? '' : 'rollCall_ShowCanvas'}}">
+        <qr-container text="{{checkin_data}}" size="330" id="myQrcode"></qr-container>
+      </view>
+    </view>
+    <view class="rollCall_btn">
+      <button bindtap="saveToLocal">保存图片</button>
+      <button bindtap="share">分享图片</button>
+      
+    </view>
+  </view>
+  <!-- 画布 -->
+
+
+</view>

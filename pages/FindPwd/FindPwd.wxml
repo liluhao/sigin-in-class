@@ -1,0 +1,32 @@
+<!--pages/FindPwd/FindPwd.wxml-->
+<view class="FindPwd_head">
+	<i-icon type="return" class="FindPwd_icon" size="28"  bindtap="goback"/>
+  <view class="FindPwd_title">找回密码</view> 
+</view>
+<view class="FindPwd_content">
+  <i-steps>
+    <i-step wx:for="{{List}}" wx:key="index" status="{{item.status}}" icon="{{item.icon}}">
+        <view slot="title">
+              {{item.title}}
+        </view>
+    </i-step>
+</i-steps>
+</view>
+<view class="FindPwd_input">
+	<i-panel title="基础用法">
+    <i-input value="{{ phone }}" title="手机号" placeholder="请输入你的手机号" bind:change="twosteps" maxlength="-1" />
+    <i-input value="{{ email }}" title="邮 箱" placeholder="请输入你设置的邮箱" bind:change="threesteps"  maxlength="-1"/>
+</i-panel>
+</view>
+<navigator class="weui-btn weui-btn_primary" aria-role="button" url="javascript:" bindtap="repwd">找回密码</navigator>
+<view aria-role="dialog" aria-modal="true" class="fadeIn" wx:if="{{iosDialog}}">
+        <view class="weui-mask"></view>
+        <view class="weui-dialog">
+          <view class="weui-dialog__bd">密码重置成功！</view>
+          <view class="weui-dialog__bd">初始密码为：123456，请牢记密码</view>
+            <view class="weui-dialog__ft">
+                <view aria-role="button" class="weui-dialog__btn weui-dialog__btn_primary" bindtap="close">知道了</view>
+            </view>
+        </view>
+    </view>
+

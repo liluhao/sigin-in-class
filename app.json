@@ -1,0 +1,56 @@
+{
+  "pages":[
+    "pages/login/login",
+    "pages/index/index",
+    "pages/record/record",
+    "pages/startRollCall/rollCall",
+    "pages/register/register",
+    "pages/FindPwd/FindPwd",
+    "pages/setup/setup",
+    "pages/help/help",
+    "pages/me/me",
+    "pages/sign/sign",
+    "pages/addclassroom/addclassroom",
+    "pages/class/class"
+  ],
+  "subPackages": [
+    {
+      "root": "packageA",
+      "name": "packageA",
+      "pages": [
+        "pages/statistics/statistics"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationStyle": "custom",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {
+    "i-steps": "./dist/steps/index",
+    "i-step": "./dist/step/index",
+    "i-icon": "./dist/icon/index",
+    "i-input": "./dist/input/index",
+    "i-collapse": "./dist/collapse/index",
+    "i-collapse-item": "./dist/collapse-item/index",
+    "i-spin": "./dist/spin/index",
+    "i-tag": "./dist/tag/index",
+    "i-cell-group": "./dist/cell-group/index",
+    "i-cell": "./dist/cell/index",
+    "i-checkbox-group": "./dist/checkbox-group/index",
+    "i-checkbox": "./dist/checkbox/index",
+    "i-tabs": "./dist/tabs/index",
+    "i-tab": "./dist/tab/index"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  }
+
+}

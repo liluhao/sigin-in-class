@@ -1,0 +1,148 @@
+/* pages/me/me.wxss */
+page {
+  height: 100%;
+  background-color: white;
+}
+.me_index {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.me_header {
+  position: relative;
+  width: 100%;
+  height: 5rem;
+  /* background-color: red; */
+  top: 3.8rem;
+  display: flex;
+  align-items: center;
+  text-indent: 6rem;
+  font-size: 18px;
+}
+
+.me_header image {
+  position: absolute;
+  width: 3.5rem;
+  height: 3.5rem;
+  left: 1.5rem;
+}
+
+.me_fanhui {
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  left: 10px;
+  top: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.me_fanhui image {
+  width: 30px;
+  height: 30px;
+  left: 0;
+}
+
+.me_nick {
+  display: flex;
+  align-items: center;
+}
+
+.me_item {
+  margin: 0 auto;
+  position: relative;
+  width: 94%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  top: 5rem;
+  border-bottom: 1px solid rgb(238, 231, 231);
+  /* box-shadow: 0 0.5px 0 rgb(233, 218, 218); */
+}
+
+.me_item image {
+  margin: 0 0 0 10px;
+  width: 1.2rem;
+  height: 1.2rem;
+  left: 1rem;
+}
+
+.me_item text {
+  width: 80%;
+  text-indent: 0.5rem;
+  font-weight: 200;
+  font-size: 14px;
+}
+
+.me_mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(66, 66, 66, 0.5);
+}
+
+.me_showMaskTrue {
+  display: block;
+}
+
+.me_showMaskFalse {
+  display: none;
+}
+
+.me_userInfo {
+  width: 90%;
+  height: auto;
+  position: relative;
+  margin: 500rpx auto;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20rpx;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.me_userInfo input {
+  width: 80%;
+  height: 70rpx;
+  margin: 20rpx auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.me_userInfo radio {
+  width: 40%;
+  height: 70rpx;
+  margin-left: 40rpx;
+}
+
+.me_userInfo radio-group {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.me_btn {
+  position: relative;
+  margin: 10rpx auto;
+  width: 100%;
+  height: 110rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.me_btn button {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

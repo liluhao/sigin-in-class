@@ -1,0 +1,50 @@
+<!--pages/class/class.wxml-->
+<view class="record_index">
+  <view class="record_head">
+    <i-icon type="return" size="28" color="#868f9f" class="record_icon" bindtap="goback" />
+    <view class="record_title">签到</view>
+  </view>
+  <i-tabs current="{{ current }}" bindchange="handleChange">
+    <i-tab key="record_created" title="已创建"></i-tab>
+    <i-tab key="record_records" title="签到记录"></i-tab>
+  </i-tabs>
+  <view class="record_content">
+      <!-- record_created -->
+    <view wx:if="{{current === 'record_created'}}" class="record_createdItems">
+      <view wx:for="{{createdCheckinLists}}" wx:key="index" wx:for-item="createdCheckinList" bindtap="goStatic" data-info="{{createdCheckinList}}">
+        <view class="record_createdItem {{ createdCheckinList.checkin_state === 1 ? 'backColor1' : 'backColor2' }}">
+          <view class="record_createdItemIcon">
+            <image src="../../static/image/record/record_class.png"></image>
+          </view>
+          <view class="record_createdItemInfo">
+            <view>课程名：{{createdCheckinList.lesson_name}}</view>
+            <view>发起时间：{{createdCheckinList.begin_time}}</view>
+          </view>
+        </view>
+      </view>
+
+
+    </view>
+    <!-- record_records -->
+    <view wx:else="">
+      <view wx:for="{{checkinLists}}" wx:key="index" wx:for-item="checkinList" bindtap="goStatic" data-info="{{checkinList}}">
+      <!-- backColor1 表示蓝色正在进行 2表示灰色已经过期-->
+        <view class="record_recordsItem {{ checkinList.checkin_state === 1 ? 'backColor1' : 'backColor2' }}">
+          <view class="record_recordsItemIcon">
+            <image src="../../static/image/record/record_class.png"></image>
+          </view>
+          <view class="record_recordsItemInfo">
+            <view class="record_recordsItemInfoDetail">
+              <view>课程名：{{checkinList.lesson_name}}</view>
+              <view>发起时间：{{checkinList.begin_time}}</view>
+            </view>
+            <view class="record_recordsItemInfoIcon">
+              <image wx:if="{{checkinList.state === 1}}" src="../../static/image/record/success.png"></image>
+              <image wx:if="{{checkinList.state === 2}}" src="../../static/image/record/fail.png"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

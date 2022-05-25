@@ -1,0 +1,190 @@
+/* pages/startRollCall/rollCall.wxss */
+page{
+  height: 100%;
+	background-color: rgb(242, 242, 242);
+}
+.rooCall_index {
+	height: 100%;
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+
+.rollCall_fanhui {
+	position: absolute;
+	top: 120rpx;
+	left: 10rpx;
+	width: 50rpx;
+	height: 50rpx;
+	z-index: 100;
+}
+
+.rollCall_fanhui image {
+	width: 100%;
+	height: 100%;
+}
+
+.rollCall_header {
+	position: relative;
+	width: 100%;
+	height: 300rpx;
+	background-color: rgb(119, 130, 250);
+	border-bottom-left-radius: 36%;
+	border-bottom-right-radius: 36%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.rollCall_header text {
+	width: 50%;
+	font-size: 24px;
+	color: white;
+}
+
+.rollCall_bird {
+	position: absolute;
+	top: 220rpx;
+	width: 100rpx;
+	height: 100rpx;
+}
+
+.rollCall_bird image {
+	width: 100%;
+	height: 100%;
+}
+
+.rooCall_content {
+	width: 90%;
+	height: 800rpx;
+	/* background-color: red; */
+	margin: 50rpx auto 0;
+}
+
+.rollCall_selectClass {
+	height: 100rpx;
+	background-color: rgb(255, 255, 255);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 20rpx;
+	margin-bottom: 40rpx;
+	box-shadow: 3px 3px 5px rgb(230, 230, 230);
+}
+
+.rollCall_selectClass text {
+	text-indent: 1rem;
+	font-size: 20px;
+}
+
+.rollCall_selectClassIcon {
+	width: 300rpx;
+	height: 50rpx;
+	margin-right: 1rem;
+	display: flex;
+	align-items: center;
+	font-size: 18px;
+	color: #8C5CFA;
+}
+
+.rollCall_selectClassIcon image {
+  position: absolute;
+	right: 70rpx;
+	width: 45rpx;
+	height: 45rpx;
+}
+
+.rollCall_selectCheckWay {
+	width: 100%;
+	height: 200rpx;
+	position: relative;
+	box-shadow: 3px 3px 5px rgb(230, 230, 230);
+	background-color: rgb(255, 255, 255);
+	border-radius: 20rpx;
+	display: flex;
+	flex-direction: column;
+
+}
+
+.rollCall_selectCheckWayText {
+	margin: 20rpx;
+	font-size: 20px;
+}
+
+.rollCall_checkWay{
+	margin: 20rpx;
+	display: flex;
+}
+radio-group{
+	display: flex;
+}
+radio-group radio{
+	margin-right: 20rpx;
+}
+.rooCall_footer button{
+	border-radius: 50rpx;
+	background-color: rgb(122,125,250);
+	width: 300rpx;
+	height: 100rpx;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-size: 18px;
+}
+.rollCall_canvas{
+  position: relative;
+  margin: 0 auto;
+	top: -645rpx;
+	width: 330rpx;
+  height: 330rpx;
+  
+  background-color: red;
+}
+.rollCall_mask{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,.5);
+}
+.rollCall_image{
+	position: relative;
+	margin: 120rpx auto 0;
+	width: 80vw;
+  height: 70vh;
+  background-color: red;
+}
+.rollCall_image >image{
+	width: 100%;
+	height: 100%;
+}
+.rollCall_btn{
+	top: 20rpx;
+	position: relative;
+	width: 90%;
+	height: 100rpx;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
+}
+.rollCall_btn button{
+	width: 40%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(119, 130, 250);
+	border-radius: 20rpx;
+
+}
+.rollCall_showMask{
+	display: none;
+}
+.rollCall_ShowCanvas{
+  display: none;
+}
+

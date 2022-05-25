@@ -1,0 +1,53 @@
+/* pages/login/login.wxss */
+.login_head{
+  width: 80%;
+  height: 300px;
+  position: relative;
+  /* 居中 */
+  margin: 0 auto;
+  top: 10px;
+}
+.login_head image{
+  width: 100%;
+  height: 350rpx;
+}
+.login_headTip{
+	width: 100%;
+	height: 6rem;
+  font-size: 38px;
+  color: white;
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  top: 4rem;
+  /* left: 4.2rem; */
+}
+.login_inputs{
+  margin-top: 20vh;
+}
+.login_inputs .login_input{
+  background-color: #e2f5fc;
+  height: 15px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+.weui-btn{
+  width: 100%;
+  border-radius: 30px;
+  background-color: #ff65a3;
+  margin-top: 40px;
+}
+.login_footer{
+  position: fixed;
+  color: #a7b6d9;
+  bottom: 20px;
+  display: flex;
+}
+.login_footer text:nth-child(1){
+  margin-left: 50px;
+}
+.login_footer text:nth-child(2){
+  margin-left: 80px;
+}

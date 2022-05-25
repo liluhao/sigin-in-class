@@ -1,0 +1,14 @@
+<!--pages/help/help.wxml-->
+<view class="help_head">
+  <i-icon type="return" class="help_icon_return" size="28" bindtap="goback" />
+  <text>帮助手册</text>
+</view>
+<view class="help_content">
+  <i-collapse>
+    <i-collapse-item title="{{item.title}}" name="{{item.name}}" i-class-title="help_collapse-item-title" i-class-content="help_collapse-item-content" wx:for="{{TipList}}" wx:key="index">
+      <view slot="content">
+        {{item.content}}
+      </view>
+    </i-collapse-item>
+  </i-collapse>
+</view>

@@ -1,0 +1,151 @@
+/**index.wxss**/
+/* page{
+  background-image: url(https://6261-background-6g5prytq23b05e27-1311982474.tcb.qcloud.la/background.png?sign=d75ce939626bf53808b3d05f58dd0e4f&t=1652792599);
+  background-repeat: no-repeat;
+  background-size: 420px 360px;
+  background-attachment: fixed;
+  background-position-x: 0px;
+  background-position-y: bottom;
+} */
+.index_index {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.index_header {
+  position: relative;
+  top: 3.8rem;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.index_checkWay {
+  position: absolute;
+  left: 80rpx;
+  top: 20rpx;
+  width: 150rpx;
+  height: 140rpx;
+  background-color: rgba(235, 235, 235, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.index_showWay {
+  display: none;
+}
+
+.index_showCode {
+  display: none;
+}
+
+.index_checkCode {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 2600rpx;
+  background-color: rgba(83, 83, 83, 0.5);
+}
+
+.index_Code {
+  position: relative;
+  top: 500rpx;
+  margin: 0 auto;
+  width: 80%;
+  height: 260rpx;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10rpx;
+  text-align: left;
+}
+
+.index_Code input {
+  margin-top: 20rpx;
+  width: 90%;
+  height: 100rpx;
+  background-color: rgb(246, 246, 255);
+  text-indent: 10rpx;
+}
+
+.index_codeBtn {
+  position: relative;
+  margin-top: 50rpx;
+  width: 98%;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.index_header image {
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  left: 10px;
+  color: black;
+}
+
+.index_container {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  display: grid;
+  grid-template-columns: auto auto;
+  top: 6rem;
+}
+
+.index_img_item {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.index_img_item image {
+  width: 8.5rem;
+  height: 6rem;
+  box-shadow: 1.5px 1px 3px #888888;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.index_Rollcall {
+  position: relative;
+  top: 7rem;
+  width: 100%;
+  height: 200px;
+}
+
+.index_Rollcall .index_img_item image {
+  width: 9rem;
+  height: 8rem;
+  border-radius: 50%;
+}
+
+.index_footer {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.index_footer image {
+  width: 10%;
+  height: 70%;
+  padding: 0 15px;
+}

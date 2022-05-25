@@ -1,0 +1,36 @@
+<!--pages/sign/sign.wxml-->
+<view class="sign_head">
+  <i-icon type="return" size="28" color="#80848f" class="sign_icon" bindtap="goback" />
+  <view class="sign_title">
+    签到情况
+  </view>
+</view>
+<view class="sign_content">
+  <view class="sign_summary">
+  <image src="../../static/image/sign/echarts.png"></image>
+</view>
+<view class="sign_card">
+<view bindtap="checktabs" data-index="0">
+  <view class="sign_summary1">{{totalList.length}}</view>
+ <view style="color: {{sum_color}};">总人数</view>
+</view>
+<view bindtap="checktabs" data-index="1">
+  <view class="sign_summary2">{{checkninList.length}}</view>
+  <view style="color:{{signed_color}};">已签到</view>
+</view>
+<view bindtap="checktabs" data-index="2">
+  <view class="sign_summary3">{{nocheckinList.length}}</view>
+  <view style="color:{{unsigned_color}};">未签到</view>
+</view>
+</view>
+</view>
+<view class="sign_List" >
+  <i-cell-group class="sign_cell" wx:for="{{peopleList_sum}}" wx:key="index">
+    <i-cell title="{{item.class_name}}" label="{{item.user_name || default_name}}" value="{{item.state}}" ></i-cell>
+  </i-cell-group>
+  <view class="sign_nopeople" wx:if="{{!peopleList_sum.length}}">
+    <image src="../../static/image/sign/nopeople.png" wx:if="{{!peopleList_sum.length}}"></image>
+  <view>暂无人员</view>   
+  </view>
+ 
+</view>

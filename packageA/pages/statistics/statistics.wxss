@@ -1,0 +1,72 @@
+/* pages/statistics/statistics.wxss */
+.statistics_head{
+  width: 100%;
+  height: 40px;
+}
+.statistics_return{
+  position: absolute;
+  left: 10px;
+  top: 30px;
+}
+.statistics_content{
+  margin-top: 30px;
+  margin-left: 15px;
+}
+.statistics_content .statistics_title{
+  font-size: 30px;
+  font-weight:550;
+  color: #4f4f4f;
+}
+.statistics_content .statistics_switch{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 10px;
+  width: 90%;
+}
+.statistics_content .statistics_class_switch{
+  color: #4f4f4f;
+  font-weight: bold;
+}
+.statistics_class_switch image{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 70px;
+}
+.statistics_switch .statistics_switch_btn{
+  border: 3px solid #a87dee;
+  border-radius: 30px;
+  padding: 0 2px;
+  color: #a87dee;
+  font-weight: bold;
+  font-size: smaller;
+}
+.statistics_echarts{
+  width: 700rpx;
+  height: 700rpx;
+  margin: 0 auto;
+}
+ec-canvas{
+  width: 100%;
+  height: 100%;
+}
+.statistics_footer{
+  width: 80%;
+  margin-left: 40px;
+  margin-top: -60px;
+}
+.weui-grid{
+  width: 50%;
+  height: 130px;
+  border: 3px solid #f3f3f3;
+}
+.weui-grid .weui-grid__icon{
+  font-size:25px;
+  margin-left: 50px;
+  width: 100%;
+}
+.weui-grid .weui-grid__label{
+  margin-top: 30px;
+  color: #4f4f4f;
+}

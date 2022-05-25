@@ -1,0 +1,124 @@
+/* pages/class/class.wxss */
+page {
+  background-color: #ececec;
+}
+
+.class_head {
+  width: 100%;
+  height: 70px;
+  background-color: #ffffff;
+}
+
+.class_head .class_icon {
+  position: absolute;
+  left: 10px;
+  top: 30px;
+}
+
+.class_title {
+  position: absolute;
+  top: 30px;
+  left: 170px;
+  font-size: 18px;
+}
+
+.class_classrooms {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.class_classroom {
+  width: 90%;
+  height: 100px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  border-left: 10px solid blueviolet;
+}
+.class_classroom .class_classroom_head{
+  margin-top: 10px;
+  margin-left: 5px;
+  font-size: 17px;
+  color: #8a2be2;
+}
+.class_classroom_head text{
+  font-size: 13px;
+  color: black;
+}
+.class_classroom .class_classroom_content{
+  /* 超出一行省略 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-left: 5px; 
+  /* 垂直居中 */
+  align-items: center;
+  width: 350px;
+
+}
+.class_classroom_content text{
+  font-size: 13px;
+  color: #6668db;
+}
+.class_classroom_footer{
+  display: flex;
+  justify-content: flex-end;
+}
+.class_classroom_footer .class_classroom_del, .class_classroom_rollcall, .class_classroom_edit{
+  width: 55px;
+  height: 25px;
+  background-color: #ececec;
+  border-radius: 30px;
+  font-size: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+  margin-top: 5px;
+}
+.class_dialog_title{
+  display: flex;
+  margin: 0 auto;
+
+}
+.class_dialog_title input{
+  margin-left: -20px;
+  font-size: 13px;
+  margin-top: 2px;
+}
+.class_dialog_content{
+  display: flex;
+  justify-content: space-between;
+}
+.class_dialog_content .class_dialog_content_title{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 220px;
+  margin-left: 40px;
+}
+.class_dialog_content .class_dialog_content_title text{
+  font-size: 13px;
+  color: #6668db;
+}
+.class_dialog_content image{
+  width: 20px;
+  height: 20px;
+  margin: auto 20px;
+}
+.addclassroom_checkall{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+.addclassroom_checkall .weui-btn{
+  background-color: #2d8cf0;
+  border-radius: 10px;
+}
+.class_nolesson{
+  font-size: 25px;
+  text-align: center;
+  margin-top: 50px;
+}

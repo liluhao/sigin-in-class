@@ -1,0 +1,109 @@
+<!--pages/class/class.wxml-->
+<view class="class_head">
+  <i-icon type="return" size="28" color="#868f9f" class="class_icon" bindtap="goback" />
+  <view class="class_title">课堂列表</view>
+</view>
+<i-tabs current="{{ current }}" bindchange="handleChange">
+  <i-tab key="tab1" title="已创建" bindtap="created"></i-tab>
+  <i-tab key="tab2" title="已加入" bindtap="joined"></i-tab>
+</i-tabs>
+<view class="class_classrooms animate__animated animate__backInLeft" wx:for="{{classroomList_created}}" wx:key="index">
+  <view class="class_classroom">
+    <view class="class_classroom_head">{{item.lesson_name}}
+      <text>{{item.created_at}}</text>
+    </view>
+    <view class="class_classroom_content">组成班级:
+      <text wx:for="{{item.class_name_list}}" wx:for-item="class" wx:key="index">{{class}} </text>
+    </view>
+    <view class="class_classroom_footer" hidden="{{current=='tab2'}}">
+      <view class="class_classroom_edit" bindtap="isEdit" data-classroom_name="{{item.lesson_name}}" data-classname="{{item.class_name_list}}" data-index="{{index}}" >
+        <i-icon type="brush_fill" size="20" color="#80848f" />
+        <text>编辑</text>
+      </view>
+      <view class="class_classroom_rollcall" bindtap="Torollcall">
+        <image src="../../static/image/class/rollcall.png" style="width: 17px;height: 17px;"></image>
+        <text>点名</text>
+      </view>
+      <view class="class_classroom_del" bindtap="del_classroom" data-index="{{index}}" >
+        <i-icon type="trash_fill" size="20" color="#80848f" />
+        <text>移除</text>
+      </view>
+
+    </view>
+  </view>
+</view>
+<view class="class_nolesson" wx:if="{{!classroomList_created.length}}">
+  <image src="../../static/image/class/nolesson.png"></image>
+  <view>暂无课堂信息</view>
+</view>
+<view aria-role="dialog" aria-modal="true" class="fadeIn" wx:if="{{dialog}}">
+  <view class="weui-mask"></view>
+  <view class="weui-dialog">
+    <view class="class_dialog_title">课堂名称:
+      <input style="color: #8a2be2;" type="text" model:value="{{isEdit_classroom_name}}" placeholder="请输入课堂名称"/>
+    </view>
+    <view class="class_dialog_content">
+    <view class="class_dialog_content_title">组成班级:
+    <text wx:for="{{isEdit_classname}}" wx:key="index">{{item}}</text>
+     </view> 
+    <image src="../../static/image/addclassroom/add_class.png" bindtap="switch_class"></image>
+    </view>
+
+    <view class="weui-dialog__ft">
+      <view aria-role="button" class="weui-dialog__btn weui-dialog__btn_default" bindtap="close">关闭</view>
+      <view aria-role="button" class="weui-dialog__btn weui-dialog__btn_primary" bindtap="changeclassroom">确定</view>
+    </view>
+  </view>
+</view>
+<view class="weui-half-screen-dialog  weui-half-screen-dialog_large weui-transition {{dialog1 ? 'weui-transition_show' : ''}}">
+  <view class="weui-half-screen-dialog__hd">
+    <view class="weui-half-screen-dialog__hd__side" bindtap="close_class">
+      <view aria-role="button" class="weui-icon-btn"><i class="weui-icon-close-thin"></i></view>
+    </view>
+    <view class="weui-half-screen-dialog__hd__main">
+      <strong class="weui-half-screen-dialog__title" id="js_dialog_title">请选择班级</strong>
+    </view>
+  </view>
+  <view class="weui-half-screen-dialog__bd" style="padding-top: 32px; height: 200px;">
+  <view class="addclassroom_checkall">
+    <navigator class="weui-btn weui-btn_mini weui-btn_primary weui-wa-hotarea" aria-role="button" url="javascript:" bindtap="checkall">全选</navigator>
+    <navigator class="weui-btn weui-btn_mini weui-btn_primary weui-wa-hotarea" aria-role="button" url="javascript:" bindtap="nocheckall">全不选</navigator>
+  </view>
+  
+    <i-checkbox-group current="{{classList_checked}}" bindchange="handleClassChange">
+       <i-checkbox wx:for="{{classList}}" position="right" wx:key="index" value="{{item}}">
+      </i-checkbox>
+      
+    </i-checkbox-group>
+  </view>
+</view>
+<!-- <view class="class_classrooms">
+  <view class="class_classroom">
+    <view class="class_classroom_head">计算机组成原理</view>
+    <view class="class_classroom_content">组成班级:
+      <text>数据191</text>
+      <text>数据191</text>
+      <text>数据191</text>
+      <text>数据191</text>
+      <text>数据191</text>
+      <text>数据191</text>
+      <text>数据191</text>
+      <text>数据191</text>
+    </view>
+    <view class="class_classroom_footer">
+      <view class="class_classroom_edit">
+        <i-icon type="brush_fill" size="20" color="#80848f" />
+        <text>编辑</text>
+      </view> 
+      <view class="class_classroom_rollcall">
+        <image src="../../static/image/class/rollcall.png" style="width: 17px;height: 17px;"></image>
+        <text>点名</text>
+      </view> 
+      <view class="class_classroom_del">
+        <i-icon type="trash_fill" size="20" color="#80848f" />
+        <text>移除</text>
+      </view>
+     
+    </view>
+  </view>
+</view> -->

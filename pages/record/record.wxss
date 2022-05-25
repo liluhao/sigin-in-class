@@ -1,0 +1,127 @@
+/* pages/record/record.wxss */
+page {
+  background-color: #ebebeb;
+  height: 100%;
+}
+
+.record_index {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.record_head {
+  width: 100%;
+  height: 70px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
+.record_title {
+  position: relative;
+  top: 60rpx;
+  font-size: 20px;
+}
+
+.record_head .record_icon {
+  position: absolute;
+  left: 10px;
+  top: 30px;
+}
+
+.record_content{
+  width: 100%;
+  height: auto;
+}
+.record_createdItems{
+  width: 100%;
+  height: auto;
+}
+.record_createdItem{
+  width: 98%;
+  height: 120rpx;
+  margin: 10rpx auto 10rpx;
+  border-bottom: 1px solid rgb(179, 179, 179);
+  display: flex;
+  background-color: white;
+  border-radius: 10rpx;
+  box-shadow: 3rpx 3rpx 5rpx rgb(139, 139, 139);
+}
+.record_createdItemIcon{
+  width: 120rpx;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.record_createdItemIcon image{
+  width: 70%;
+  height: 70%;
+}
+.record_createdItemInfo{
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.record_recordsItems{
+  width: 100%;
+  height: auto;
+}
+.record_recordsItem{
+  width: 98%;
+  height: 120rpx;
+  margin: 10rpx auto 10rpx;
+  border-bottom: 1px solid rgb(179, 179, 179);
+  display: flex;
+  background-color: white;
+  border-radius: 10rpx;
+  box-shadow: 3rpx 3rpx 5rpx rgb(139, 139, 139);
+}
+.record_recordsItemIcon{
+  width: 120rpx;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.record_recordsItemIcon image{
+  width: 70%;
+  height: 70%;
+
+}
+.record_recordsItemInfo{
+  width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.record_recordsItemInfoDetail{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  height: 100%;
+}
+.record_recordsItemInfoIcon{
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.record_recordsItemInfoIcon image{
+  width: 45%;
+  height: 45%;
+}
+.backColor1{
+  background-color: rgb(160, 197, 228);
+}
+.backColor2{
+  background-color: #ffffff;
+}
+

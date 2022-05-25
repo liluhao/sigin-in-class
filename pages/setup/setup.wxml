@@ -1,0 +1,39 @@
+<!--pages/setup/setup.wxml-->
+<view setup_main>
+  <view class="setup_head">
+	<i-icon type="return" class="setup_icon_return" size="28"  bindtap="goback"/>
+  <text>设置</text> 
+</view>
+<view class="setup_content">
+<view class="setup_content_item" bindtap="Tohelp">
+<text>帮助手册</text>
+<i-icon type="enter" class="setup_icon_enter" size="20" />
+</view>
+<view class="setup_content_item" bindtap="showVersion">
+<text>版本检测</text>
+<i-icon type="enter" class="setup_icon_enter" size="20"/>
+</view>
+<view class="setup_content_item">
+<text>开发作者</text>
+<text class="setup_icon_enter">一位不愿意暴露姓名的作者</text>
+</view>
+</view>
+<view class="setup_footer">
+  <navigator class="weui-btn weui-btn_primary" aria-role="button" url="javascript:" bindtap="showmodal">退出登陆</navigator>
+</view>
+<view aria-role="dialog" aria-modal="true" class="fadeIn" wx:if="{{iosDialog}}">
+        <view class="weui-mask"></view>
+        <view class="weui-dialog">
+        <view class="weui-dialog__bd" wx:if="{{spinShow}}"></view>
+          <view class="weui-dialog__bd" wx:if="{{!spinShow}}">版本号为：1.0.0</view>
+            <i-spin size="large" fix wx:if="{{spinShow}}" i-class="item"></i-spin>
+            <view class="weui-dialog__ft">
+                <view aria-role="button" class="weui-dialog__btn weui-dialog__btn_primary" bindtap="close">知道了</view>
+            </view>
+        </view>
+    </view>
+  
+</view>
+
+   
+

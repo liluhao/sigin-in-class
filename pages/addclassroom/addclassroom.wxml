@@ -1,0 +1,41 @@
+<!--pages/addclassroom/addclassroom.wxml-->
+<view class="addclassroom_head">
+  <i-icon type="return" size="28" color="#868f9f" class="addclassroom_icon" bindtap="goback" />
+  <view class="addclassroom_title">创建课堂</view>
+</view>
+<view class="addclassroom_content">
+  <view >课堂名称</view>
+  <input type="text" placeholder="请输入名称" model:value="{{classroom}}"/>
+</view>
+<view class="addclassroom_class">
+  <view>上课班级
+    <text wx:for="{{classList_checked}}" wx:key="index">{{item}}</text>
+  </view>
+  <image src="../../static/image/addclassroom/add_class.png" bindtap="switch_class"></image>
+</view>
+<!-- 半屏组件 -->
+<view class="weui-half-screen-dialog  weui-half-screen-dialog_large weui-transition {{dialog ? 'weui-transition_show' : ''}}">
+  <view class="weui-half-screen-dialog__hd">
+    <view class="weui-half-screen-dialog__hd__side" bindtap="close">
+      <view aria-role="button" class="weui-icon-btn"><i class="weui-icon-close-thin"></i></view>
+    </view>
+    <view class="weui-half-screen-dialog__hd__main">
+      <strong class="weui-half-screen-dialog__title" id="js_dialog_title">请选择班级</strong>
+    </view>
+  </view>
+  <view class="weui-half-screen-dialog__bd" style="padding-top: 32px; height: 200px;">
+  <view class="addclassroom_checkall">
+    <navigator class="weui-btn weui-btn_mini weui-btn_primary weui-wa-hotarea" aria-role="button" url="javascript:" bindtap="checkall">全选</navigator>
+    <navigator class="weui-btn weui-btn_mini weui-btn_primary weui-wa-hotarea" aria-role="button" url="javascript:" bindtap="nocheckall">全不选</navigator>
+  </view>
+  
+    <i-checkbox-group current="{{classList_checked}}" bindchange="handleClassChange">
+       <i-checkbox wx:for="{{classList}}" position="right" wx:key="index" value="{{item}}">
+      </i-checkbox>
+      
+    </i-checkbox-group>
+  </view>
+</view>
+<view class="addclassroom_btn">
+  <navigator class="weui-btn weui-btn_primary" aria-role="button" url="javascript:" bindtap="AddClass">立即创建</navigator>
+</view>

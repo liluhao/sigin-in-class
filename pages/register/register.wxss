@@ -1,0 +1,65 @@
+/* pages/register/register.wxss */
+/* pages/login/login.wxss */
+.register_head{
+  width: 80%;
+  height: 300px;
+  position: relative;
+  /* 居中 */
+  margin: 0 auto;
+  top: 10px;
+}
+.register_head image{
+  width: 100%;
+  height: 350rpx;
+}
+.register_headTip{
+  font-size: 38px;
+  color: white;
+  position: absolute;
+  top: 90px;
+  left: 94px;
+}
+.register_inputs{
+  margin-top: 20vh;
+}
+.register_inputs .register_input{
+  background-color: #e2f5fc;
+  height: 15px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+/* .register_select{
+  color: #80a0cc;
+  text-align: center;
+  margin-top: 20px;
+} */
+.register_select{
+  color: #80a0cc;
+  text-align: center;
+}
+.register_select .weui-select{
+  padding-right: 0px;
+}
+#register_select_image{
+  width: 12px;
+  height: 12px;
+  margin-bottom: 15px;
+  margin-left: 0px;
+}
+.weui-btn{
+  width: 100%;
+  border-radius: 30px;
+  background-color: #ff65a3;
+  margin-top: 10px;
+}
+.login_footer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  color: #a7b6d9;
+  margin-top: 60vh;
+}
+.login_footer text{
+  margin-left: 10px;
+}

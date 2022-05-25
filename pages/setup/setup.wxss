@@ -1,0 +1,37 @@
+/* pages/setup/setup.wxss */
+.setup_head{
+	/* margin-top: 50px; */
+  width: 100%;
+  height: 30px;
+  text-align: center;
+ 	padding: 10px;
+  color: black;
+  position: relative;
+  font-size: large;
+  margin-top: 20px;
+}
+.setup_icon_return{
+	position: absolute;
+	left: 5px;
+}
+.setup_content{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.setup_content .setup_content_item{
+  margin-left: 15px;
+  width: 90%;
+  margin-top: 15px;
+}
+.setup_content .setup_icon_enter{
+  position: absolute;
+  right: 15px;
+  color: #9e9fa4;
+}
+.setup_footer .weui-btn{
+  margin-top: 20px;
+  width: 90%;
+  background-color: #ffe933;
+  color: #546733;
+}

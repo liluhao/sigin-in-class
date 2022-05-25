@@ -1,0 +1,19 @@
+<!--pages/login/login.wxml-->
+<view class="login_content">
+  <view class="login_head">
+    <image src="../../static/image/login/login.png"></image>
+    <view class="login_headTip">签到助手</view>
+    <view class="login_inputs">
+      <input type="text" class="login_input" placeholder="请输入用户名" model:value="{{phone}}" />
+      <!-- <input type="text" class="login_input" placeholder="请输入邮箱" /> -->
+      <input type="text" class="login_input" password="true" placeholder="请输入密码" model:value="{{password}}" />
+      <navigator class="weui-btn weui-btn_primary" aria-role="button" url="javascript:" bindtap="formSubmit">立即登录</navigator>
+    </view>
+
+
+  </view>
+  <view class="login_footer">
+    <text bindtap="Toregister">还没有账号?点此注册</text>
+    <text bindtap="ToFindpwd">忘记密码?</text>
+  </view>
+</view>

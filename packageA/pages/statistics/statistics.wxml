@@ -1,0 +1,40 @@
+<!--pages/statistics/statistics.wxml-->
+<view class="statistics_head">
+  <i-icon type="return" size="28" color="#80848f" class="statistics_return" bindtap="goback" />
+</view>
+<view class="statistics_content">
+  <view class="statistics_title">
+        <text>{{className}}</text>
+  </view>
+  <view class="statistics_switch">
+    <view class="statistics_class_switch">
+      <text>{{begin_time}}</text>
+      <image src="../../../static/image/statistics/beginClass.png"></image>
+    </view>
+    <view class="statistics_switch_btn weui-cell_bd">
+      <picker aria-role="combobox" bindchange="bindPickerChange" range="{{classList}}">
+        <text>切换</text>
+        <i-icon type="unfold" size="20" color="#a87dee" />
+      </picker>
+    </view>
+    <view class="statistics_echarts">
+      <ec-canvas id="echarts" canvas-id="echarts" ec="{{ec}}" force-use-old-canvas="true"></ec-canvas>
+    </view>
+  </view>
+</view>
+<view class="statistics_footer">
+  <view class="weui-grids">
+    <navigator class="weui-grid" aria-role="button" url="javascript:" wx:for="{{data_info}}" wx:key="index" style="color: {{item.color}};" bindtap="Tosign">
+      <view class="weui-grid__icon">
+        {{item.number}}人
+      </view>
+      <view class="weui-grid__label">{{item.type}}</view>
+    </navigator>
+    <navigator class="weui-grid" aria-role="button" url="javascript:">
+      <view class="weui-grid__icon" style="color: #35d86e;">
+        {{checkrate}}%
+      </view>
+      <view class="weui-grid__label">签到率</view>
+    </navigator>
+  </view>
+</view>

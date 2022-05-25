@@ -1,0 +1,91 @@
+<!--pages/me/me.wxml-->
+<view class="me_index">
+  <view class="me_fanhui">
+    <i-icon type="return" size="28" color="#80848f" class="statistics_return" bindtap="goback" />
+  </view>
+  <!-- 头部 -->
+  <view class="me_header">
+    <view class="me_nick" bindtap="changeUserInfo" data-type="0">
+      <image src="../../static/image/me/header-default.png"></image>
+      <text wx:if="{{nickName}}">{{nickName}}</text>
+      <text wx:else="">点击此处设置昵称</text>
+    </view>
+  </view>
+  <!-- 主要 -->
+  <view class="me_main">
+    <view class="me_item" bindtap="changeUserInfo" data-type="1">
+      <image src="../../static/image/me/user_info.png"></image>
+      <text>个人信息</text>
+      <image src="../../static/image/me/youjiantou1.png"></image>
+    </view>
+    <hr />
+    <view class="me_item" bindtap="changeUserInfo" data-type="2">
+      <image src="../../static/image/me/user_email.png"></image>
+      <text>我的邮箱</text>
+      <image src="../../static/image/me/youjiantou1.png"></image>
+    </view>
+    <view class="me_item" bindtap="changeUserInfo" data-type="3">
+      <image src="../../static/image/me/user_pwd.png"></image>
+      <text>修改密码</text>
+      <image src="../../static/image/me/youjiantou1.png"></image>
+    </view>
+  </view>
+
+  <!-- 用户昵称 -->
+  <view class=" {{ showUserName ? 'me_showMaskTrue me_mask ' : 'me_showMaskFalse'}}">
+    <view class="me_userInfo">
+      <form action="" method="post" catchsubmit="pullNickName">
+        <input type="text" name="nick_name" id="" maxlength="20" placeholder="昵称" model:value="{{nick_name}}" />
+        <view class="me_btn">
+          <button bindtap="closeMask" data-type="0">取消</button>
+          <button type="primary" formType="submit" data-type="0">确定</button>
+        </view>
+      </form>
+    </view>
+  </view>
+  <!-- 个人信息 -->
+  <view class=" {{ showUserInfoMask ? 'me_showMaskTrue me_mask ' : 'me_showMaskFalse'}}">
+    <view class="me_userInfo">
+      <form action="" method="post" catchsubmit="pullUserInfo">
+        <input type="text" name="realName" id="" maxlength="5" placeholder="真实姓名" model:value="{{realName}}" />
+        <radio-group name="radio">
+          <label for="">男<radio checked="{{sex == '1'}}" value="男"></radio></label>
+          <label for="">女<radio checked="{{sex == '0'}}" value="女"></radio></label>
+        </radio-group>
+        <input type="number" name="age" id="" maxlength="3" placeholder="年龄" model:value="{{age}}" />
+        <input type="text" name="hobby" id="" maxlength="100" placeholder="个人爱好" model:value="{{hobby}}" />
+        <input type="text" name="address" id="" maxlength="50" placeholder="家庭住址" model:value="{{address}}" />
+        <view class="me_btn">
+          <button bindtap="closeMask" data-type="1">取消</button>
+          <button type="primary" formType="submit">确定</button>
+        </view>
+      </form>
+    </view>
+  </view>
+  <!-- 我的邮箱  -->
+  <view class=" {{ showEmailMask ? 'me_showMaskTrue me_mask ' : 'me_showMaskFalse'}}">
+    <view class="me_userInfo">
+      <form action="" method="post" catchsubmit="pullEmail">
+        <input type="email" name="email" id="" maxlength="20" placeholder="邮箱" value="{{email}}" />
+        <view class="me_btn">
+          <button bindtap="closeMask" data-type="2">取消</button>
+          <button type="primary" formType="submit">确定</button>
+        </view>
+      </form>
+    </view>
+  </view>
+  <!-- 修改密码 -->
+  <view class=" {{ showPwdMask ? 'me_showMaskTrue me_mask ' : 'me_showMaskFalse'}}">
+    <view class="me_userInfo">
+      <form action="" method="post" catchsubmit="pullPwd">
+        <input type="password" name="oldPwd" id="" maxlength="16" placeholder="原密码" />
+        <input type="password" name="newPwd" id="" maxlength="16" placeholder="新密码" />
+        <input type="password" name="confirmNewPwd" id="" maxlength="16" placeholder="确认密码" />
+        <view class="me_btn">
+          <button bindtap="closeMask" data-type="3">取消</button>
+          <button form-type="submit" type="primary">确定</button>
+        </view>
+      </form>
+    </view>
+  </view>
+</view>

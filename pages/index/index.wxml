@@ -1,0 +1,46 @@
+<!--index.wxml-->
+<view class="index_index">
+  <view class="index_header">
+    <image src="../../static/image/index/scan.png" bindtap="showWay"></image>
+    <view class="index_checkWay {{checkWay ? '' : 'index_showWay'}}">
+      <view bindtap="scan"><text>扫一扫</text></view>
+      <view bindtap="showCode"><text>签到码</text></view>
+    </view>
+    <text>签到助手</text>
+  </view>
+  <!-- 四个选项 -->
+  <view class="index_container">
+    <view class="index_img_item" bindtap="Toclass">
+      <image src="../../static/image/index/class.png"></image>
+    </view>
+    <view class="index_img_item" bindtap="ToADDclassroom">
+      <image src="../../static/image/index/class_room.png"></image>
+    </view>
+    <view class="index_img_item" bindtap="ToRecord">
+      <image src="../../static/image/index/record.png"></image>
+    </view>
+    <view class="index_img_item" bindtap="Tostatistics">
+      <image src="../../static/image/index/statistic.png"></image>
+    </view>
+  </view>
+  <!-- 开始点名 -->
+  <view class="index_Rollcall">
+    <view class="index_img_item">
+      <image src="../../static/image/index/checkin.png" bindtap="ToRollCall"></image>
+    </view>
+  </view>
+  <!-- 底部导航 -->
+  <view class="index_footer">
+    <image src="../../static/image/index/me.png" bindtap="Tome"></image>
+    <image src="../../static/image/index/setting.png" bindtap="Tosetup" ></image>
+  </view>
+  <view class="index_checkCode {{ showCode ? '' : 'index_showCode' }}">
+    <view class="index_Code">
+      <input type="number" maxlength="6" placeholder="请输入签到码" bindblur="getCode" />
+      <view class="index_codeBtn">
+        <button bindtap="close_codeMask">取消</button>
+        <button type="default" bindtap="code">确定</button>
+      </view>
+    </view>
+  </view>
+</view>
